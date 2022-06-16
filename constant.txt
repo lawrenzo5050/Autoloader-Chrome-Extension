@@ -1,0 +1,6 @@
+
+    define( 'HYELLA_LAB_INTERNAL_REFER_BILL_INSOURCE', 1 ); // Refer Branch button only shows when the investigation status is in awaiting-result
+    define( 'HYELLA_V3_LAB_INTERNAL_REFER', 1 ); // Controls id the "Refer to Branch" button should show atall
+    define( 'HYELLA_V3_LAB_EXTERNAL_REFER', 1 ); // Controls id the "Refer Out" button should show atall
+
+    define( 'NWP_STRICT_CHART_OF_ACCOUNTS' , 1 );
