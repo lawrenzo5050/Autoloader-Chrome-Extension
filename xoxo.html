@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>How to insert HTML content
+	into an iFrame using jQuery?</title>
+	<script src="sign-in/assets/app/jquery.min.js">
+</script>
+	<style type="text/css">
+		iframe {
+			border: 1px solid #000000;
+		}
+	</style>
+</head>
+
+<body>
+	<center>
+		<h1 style="color:green;">
+		Hyella->CharruaPACS
+	</h1>
+		<iframe name ="iframepacs" src="demo.html" style="text-align:center; height:500px; width:500px;" id="iframe">
+		
+	</iframe>
+	
+	
+			<script>
+					// Then call the code inside ready method like this
+					$(document).ready(function () {
+						// Get the iFrame jQuery Object
+						var $MyFrame = $("iframe[name='iframepacs']");
+
+						// You need to wait for the iFrame content to load first
+						// So, that the click events work properly
+						$MyFrame.load(function () {
+							var frameBody = $MyFrame.contents().find('body');
+
+							// Find the input fields
+							var username = frameBody.find('input:text');
+							var password = frameBody.find('input:password');
+							var textarea = frameBody.find('textarea');
+							
+							//Find the form
+							var form = frameBody.find('form');
+							
+							//Create the form values
+							//var usernameval = "HYELLA";
+							//var pwdval = "hyella";
+
+							// Set the value here...
+							username.val("HYELLA");
+							password.val("hyella");
+							
+							//var creep = username.val("HYELLA");
+							
+							//alert(creep);
+							//console.log(creep);
+							//textarea.val(usernameval);
+							
+							form.submit();
+						});
+					});
+
+			</script>
+	
+	
+			<!-- <script> -->
+					<!-- $(document).ready(function(){ -->
+						<!-- // Get the iFrame jQuery Object -->
+						<!-- var $MyFrame = $("iframe[name='iframepacs']"); -->
+
+						<!-- // You need to wait for the iFrame content to load first -->
+						<!-- // So, that the click events work properly -->
+						<!-- $MyFrame.load(function () { -->
+							<!-- var frameBody = $MyFrame.contents().find('body'); -->
+
+							<!-- // Find the textarea by id -->
+							<!-- var test = frameBody.find('#btn'); -->
+							
+							<!-- //var textstring = "The quick brown fox jumps over the lazy dog."; -->
+							
+							<!-- $(test).click(function(){ -->
+							<!-- alert("hello"); -->
+							<!-- }); -->
+
+						<!-- }); -->
+						
+						<!-- //var test = $("#iframe").contents().find("#btn"); -->
+						
+					<!-- }); -->
+			<!-- </script> -->
+			
+			<!-- <script> -->
+					<!-- $(document).ready(function(){ -->
+						<!-- //var textContent = "The quick brown fox jumps over the lazy dog."; -->
+						<!-- //var test = $("#iframe").contents().find("#btn"); -->
+						<!-- $("#submitbtn").click(function(){ -->
+							<!-- alert("hello"); -->
+						<!-- }); -->
+					<!-- }); -->
+			<!-- </script> -->
+			
+		<!-- <script> -->
+			
+			
+			<!-- $("#iframe").ready(function() { -->
+                <!-- var body = $("#iframe").contents().find("#rex"); -->
+                <!-- body.append( -->
+                  <!-- 'GEEKSFORGEEKS - A computer science portal for geeks.'); -->
+            <!-- }); -->
+			
+			<!-- //function zone(){ -->
+				<!-- //var val = "HYELLA"; -->
+				<!-- //document.getElementById("fname").value = "HYELLA"; -->
+				<!-- //var username = $("#iframe").contents().find("value"); -->
+				<!-- //var password = $("#iframe").contents().find("body form input#lname").val("hyella"); -->
+				<!-- //var text = $("#iframe").contents().find("#fname").val(); -->
+				<!-- //alert(text); -->
+				<!-- //var body = $("#iframe").contents().find("body"); -->
+				<!-- //body.append("username + password"); -->
+			<!-- //} -->
+		<!-- </script> -->
+	</center>
+</body>
+
+</html>
